@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { fetchCategories, fetchProducts } from "../utils/api";
 import ProductCard from "../Components/ProductCard";
+import Gallery from "../Components/Gallary";
 
 
 const HomePage = () => {
@@ -34,6 +35,9 @@ const HomePage = () => {
 
   return (
     <div>
+      {/* Gallary section */}
+      <Gallery />
+
       {/* Categories Section */}
       <div className="container mx-auto p-6">
         <h2 className="text-3xl font-bold mb-6 text-secondary">Categories</h2>
