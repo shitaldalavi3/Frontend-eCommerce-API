@@ -69,7 +69,7 @@ const CombinedComponent = () => {
   }, [images.length]);
 
   return (
-    <header className="h-[1000px] bg-cover bg-center relative">
+    <header className="h-[700px] bg-cover bg-center relative">
       {/* Background Image Slider */}
       <div
         className="absolute inset-0 bg-cover transition-all duration-500 ease-in-out"
