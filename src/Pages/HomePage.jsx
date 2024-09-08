@@ -45,7 +45,7 @@ const HomePage = () => {
           {categories.map((category) => (
             <button
               key={category._id}
-              className="bg-primary text-white py-2 px-4 rounded-md"
+              className="bg-red-500 text-white py-2 px-4 rounded-md"
             >
               {category.name}
             </button>
@@ -54,8 +54,8 @@ const HomePage = () => {
       </div>
 
       {/* Products Section */}
-      <div className="container mx-auto p-6">
-        <h2 className="text-3xl font-bold mb-6 text-secondary">Our Products</h2>
+      <div className="container mx-auto p-16">
+        <h2 className="text-4xl font-bold mb-6 text-secondary">Our Products</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
           {products.map((product) => (
             <ProductCard key={product._id} product={product} />
