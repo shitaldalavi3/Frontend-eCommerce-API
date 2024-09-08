@@ -11,7 +11,6 @@ const CartPage = () => {
         <thead>
           <tr>
             <th>Product</th>
-            <th>Quantity</th>
             <th>Price</th>
             <th>Total</th>
             <th>Actions</th>
