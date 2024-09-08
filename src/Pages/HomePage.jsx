@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { fetchCategories, fetchProducts } from "../utils/api";
 import ProductCard from "../Components/ProductCard";
 import Gallery from "../Components/Gallary";
+import Footer from "../Components/Footer";
 
 const HomePage = () => {
   const [categories, setCategories] = useState([]);
@@ -61,6 +62,7 @@ const HomePage = () => {
           ))}
         </div>
       </div>
+      <Footer />
     </div>
   );
 };

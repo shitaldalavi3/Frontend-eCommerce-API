@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { fetchProductsByCategory } from "../utils/api";
 import ProductCard from "../Components/ProductCard";
+import Footer from "../Components/Footer";
 
 const CategoryPage = () => {
   const { category } = useParams(); // This is now the category ID, not name
@@ -38,6 +39,7 @@ const CategoryPage = () => {
           <ProductCard key={product._id} product={product} />
         ))}
       </div>
+      <Footer />
     </div>
   );
 };
