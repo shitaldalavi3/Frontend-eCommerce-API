@@ -1,3 +1,4 @@
+import Footer from "../Components/Footer";
 import { useCart } from "../contex/CartContext";
 
 const CartPage = () => {
@@ -63,6 +64,7 @@ const CartPage = () => {
       <div className="text-right mt-4">
         <h2 className="text-2xl">Total: €{total}</h2>
       </div>
+      <Footer />
     </div>
   );
 };
