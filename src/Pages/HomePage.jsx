@@ -4,7 +4,6 @@ import { fetchCategories, fetchProducts } from "../utils/api";
 import ProductCard from "../Components/ProductCard";
 import Gallery from "../Components/Gallary";
 
-
 const HomePage = () => {
   const [categories, setCategories] = useState([]);
   const [products, setProducts] = useState([]);
