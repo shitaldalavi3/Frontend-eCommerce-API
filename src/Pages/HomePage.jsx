@@ -3,6 +3,8 @@ import { Link } from "react-router-dom";
 import { fetchCategories, fetchProducts } from "../utils/api";
 import ProductCard from "../Components/ProductCard";
 import Gallery from "../Components/Gallary";
+import ProductSection from "../Components/ProductSection";
+import Advertise from "../Components/Advertise";
 
 
 const HomePage = () => {
@@ -38,24 +40,27 @@ const HomePage = () => {
       {/* Gallary section */}
       <Gallery />
 
-      {/* Categories Section */}
-      <div className="container mx-auto p-6">
-        <h2 className="text-3xl font-bold mb-6 text-secondary">Categories</h2>
-        <div className="flex space-x-4">
-          {categories.map((category) => (
-            <button
-              key={category._id}
-              className="bg-red-500 text-white py-2 px-4 rounded-md"
-            >
-              {category.name}
-            </button>
-          ))}
-        </div>
+
+      {/* Product Section with Tabs */}
+      <div style={{ backgroundColor: "rgb(241, 241, 241)" }}className="container mx-auto p-16 mt-12">
+        <h2 className="text-3xl font-serif font-bold mb-8 text-secondary text-center">
+          MOST POPULAR PRODUCT
+        </h2>
+
+        {/* Tabs and Product Section */}
+        <ProductSection products={products} />
       </div>
+
+      {/* Advertise Component */}
+      <div className="container mx-auto ">
+        <Advertise /> {/* Add the Advertise component here */}
+      </div>
+
+
 
       {/* Products Section */}
       <div className="container mx-auto p-16">
-        <h2 className="text-4xl font-bold mb-6 text-secondary">Our Products</h2>
+        <h2 className="text-4xl font-bold mb-6 font-serif  text-secondary">Our Products</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
           {products.map((product) => (
             <ProductCard key={product._id} product={product} />
