@@ -3,7 +3,7 @@ import { useCart } from "../contex/CartContext";
 
 const CartPage = () => {
   const { cart, addToCart, removeFromCart } = useCart();
-  const total = cart.reduce((sum, item) => sum + item.price * item.quantity, 0);
+  const total = cart.reduce((sum, item) => sum + item.price * item.quantity, 0).toFixed(2);
 
   return (
     <div className="container mx-auto p-4">
@@ -36,10 +36,10 @@ const CartPage = () => {
                 {item.quantity}
               </td>
               <td className="border border-gray-300 py-2 px-4">
-                €{item.price}
+                €{item.price.toFixed(2)}
               </td>
               <td className="border border-gray-300 py-2 px-4">
-                €{item.price * item.quantity}
+                €{(item.price * item.quantity).toFixed(2)}
               </td>
               <td className="border border-gray-300 py-2 px-4">
                 <div className="flex space-x-2">

@@ -52,9 +52,26 @@ const HomePage = () => {
         <ProductSection products={products} />
       </div>
 
+
       {/* Advertise Component */}
       <div className="container mx-auto ">
         <Advertise /> {/* Add the Advertise component here */}
+      </div>
+
+
+      <div className="container mx-auto p-16">
+      <h1 className="text-4xl font-bold mb-6 font-serif  text-secondary">Categories</h1>
+      <div className="flex flex-wrap ">
+        {categories.map((category) => (
+          <Link
+            to={`/category/${category._id}`} // Use the category ID in the link
+            key={category._id}
+            className="btn btn-outline m-2"
+          >
+            {category.name}
+          </Link>
+        ))}
+      </div>
       </div>
 
 

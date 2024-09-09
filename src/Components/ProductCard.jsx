@@ -5,6 +5,11 @@ const ProductCard = ({ product }) => {
   const productInCart = cart.find((item) => item._id === product._id);
   const quantity = productInCart ? productInCart.quantity : 0;
 
+  const handleAddToCart = () => {
+    addToCart(product);
+    alert(`${product.name} has been added to your cart.`);
+  };
+
   return (
     <div className="relative card w-72 bg-white shadow-md m-4 border group rounded-xl overflow-hidden">
       {/* Hover Overlay */}
@@ -24,7 +29,7 @@ const ProductCard = ({ product }) => {
         />
         
         {/* Hover Action Buttons */}
-        <div className="absolute bottom-2 right-0 flex flex-col space-y-2 transform translate-x-full group-hover:translate-x-0 transition-transform  duration-500 p-3">
+        <div className="absolute bottom-2 right-0 flex flex-col space-y-2 transform translate-x-full group-hover:translate-x-0 transition-transform duration-500 p-3">
           {/* Favorite Button - Heart Icon Turns Red on Hover */}
           <div className="flex items-end justify-end">
             <button className="bg-white w-10 h-10 flex items-center justify-center rounded-md shadow-md transition-colors">
@@ -34,7 +39,7 @@ const ProductCard = ({ product }) => {
           {/* Add to Cart Button */}
           <button
             className="bg-white text-black px-4 py-2 rounded-md shadow-md hover:bg-red-500 hover:text-white transition-colors"
-            onClick={() => addToCart(product)}
+            onClick={handleAddToCart}
           >
             Add to Cart
           </button>
@@ -52,4 +57,5 @@ const ProductCard = ({ product }) => {
     </div>
   );
 };
+
 export default ProductCard;
