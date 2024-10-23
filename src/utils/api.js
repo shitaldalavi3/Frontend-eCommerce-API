@@ -1,4 +1,4 @@
-const API_BASE_URL = "http://localhost:8080"; // Backend API URL
+const API_BASE_URL = "https://backend-ecommerce-api-a10g.onrender.com"; // Backend API URL
 
 // Fetch all products
 export const fetchProducts = async () => {
